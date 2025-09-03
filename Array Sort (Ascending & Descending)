@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    int arr[6] = {34, 12, 56, 78, 23, 45};
+    int i, j, temp;
+
+    // Ascending
+    for (i = 0; i < 6; i++) {
+        for (j = i + 1; j < 6; j++) {
+            if (arr[i] > arr[j]) {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    printf("Ascending Order: ");
+    for (i = 0; i < 6; i++) printf("%d ", arr[i]);
+
+    // Descending
+    for (i = 0; i < 6; i++) {
+        for (j = i + 1; j < 6; j++) {
+            if (arr[i] < arr[j]) {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    printf("\nDescending Order: ");
+    for (i = 0; i < 6; i++) printf("%d ", arr[i]);
+
+    return 0;
+}
